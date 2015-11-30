@@ -32,8 +32,8 @@ public class StoreDefine
   
   public static readonly LifetimeVG REMOVE_AD_GOOD = new LifetimeVG
   (
-      Remove AD,
-      Remove AD,
+      "Remove AD",
+      "Remove AD",
       REMOVE_AD,
       new PurchaseWithMarket( REMOVE_AD, 0.99 )
   );

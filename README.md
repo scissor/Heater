@@ -9,6 +9,8 @@ m_admobManager.RequestInterstitial( ADMOB_ID );
 m_admobManager.RequestBanner( ADMOB_ID, AdSize.Banner, AdPosition.Top );
 ```
 
+[Blog: Admob Tutorial (iOS + Android)](http://blog.ctrlxctrlv.net/en/unity-admob/)
+
 ### Facebook
 
 ```c#
@@ -18,6 +20,8 @@ m_fbManager.ErrorEvent += OnFBError;
 m_fbManager.Login();
 m_fbManager.Snapshot( texture, title, fileName );
 ```
+
+[Blog: Facebook SDK Tutorial](http://blog.ctrlxctrlv.net/unity-facebook-sdk/)
 
 ### Soomla
 
@@ -43,7 +47,16 @@ public class StoreDefine
 Using Example:
 
 ```c#
+// StoreAssets
 var assets = new StoreAssets( StoreDefine.VERSION );
 assets.AddGood( StoreDefine.REMOVE_AD );
 SoomlaStore.Initialize( assets );
+
+// StoreManager
+m_storeManager = new StoreManager();
+m_storeManager.InitializedEvent += OnStoreInitialized;
+m_storeManager.PurchasedEvent += OnStorePurchased;
+
+m_storeManager.BuyItem( StoreDefine.UNLOCK_ALL_ID );
+m_storeManager.GetBalanceItem( StoreDefine.UNLOCK_ALL_ID );
 ```

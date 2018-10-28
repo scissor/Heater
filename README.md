@@ -1,6 +1,7 @@
 # Heater
-Quick runtime managers for Unity 3rd party Plugins.
+Quick runtime managers for Unity3D 3rd party Plugins.
 
+How To Use It:
 ### Admob
 
 ```c#
